@@ -1,0 +1,116 @@
+"use client"
+
+import { BarChart3, Brain, Network, Shield, Target, Workflow } from "lucide-react"
+import { motion } from "framer-motion"
+import { cn } from "@/lib/utils"
+
+const features = [
+  {
+    icon: Brain,
+    title: "Operational Intelligence",
+    description: "Real-time insights and analytics that transform raw data into actionable intelligence for smarter decision-making across your organization.",
+    color: "text-primary",
+    bg: "bg-primary/10",
+    border: "group-hover:border-primary/50"
+  },
+  {
+    icon: Workflow,
+    title: "Workflow Automation",
+    description: "Intelligent automation systems that eliminate manual processes, reduce errors, and accelerate operations through AI-driven workflows.",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
+    border: "group-hover:border-secondary/50"
+  },
+  {
+    icon: Network,
+    title: "Real-Time Coordination",
+    description: "Seamless synchronization of teams, resources, and operations across multiple locations with live updates and intelligent routing.",
+    color: "text-accent",
+    bg: "bg-accent/10",
+    border: "group-hover:border-accent/50"
+  },
+  {
+    icon: Shield,
+    title: "Secure Digital Transformation",
+    description: "Enterprise-grade security architecture built into every layer, ensuring your digital transformation journey is protected from day one.",
+    color: "text-primary",
+    bg: "bg-primary/10",
+    border: "group-hover:border-primary/50"
+  },
+  {
+    icon: BarChart3,
+    title: "Data Visibility & Performance",
+    description: "Comprehensive dashboards and analytics engines that provide complete visibility into operations, performance metrics, and KPIs.",
+    color: "text-secondary",
+    bg: "bg-secondary/10",
+    border: "group-hover:border-secondary/50"
+  },
+  {
+    icon: Target,
+    title: "Measurable Impact",
+    description: "Systems designed with clear ROI in mind - track efficiency gains, cost reductions, and operational improvements in real-time.",
+    color: "text-accent",
+    bg: "bg-accent/10",
+    border: "group-hover:border-accent/50"
+  }
+]
+
+export function WhatWeDo() {
+  return (
+    <section className="py-24 bg-dark-lighter relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-3xl md:text-4xl font-bold text-white mb-4"
+          >
+            What We Do
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-light/70 text-lg max-w-2xl mx-auto"
+          >
+            We develop powerful digital platforms that drive transformation
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className={cn(
+                "group relative p-6 rounded-xl bg-dark-card border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+                feature.border
+              )}
+            >
+              <div className={cn("w-12 h-12 rounded-full flex items-center justify-center mb-6 transition-colors", feature.bg, feature.color)}>
+                <feature.icon className="w-6 h-6" />
+              </div>
+              <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
+                {feature.title}
+              </h3>
+              <p className="text-light/70 text-sm leading-relaxed">
+                {feature.description}
+              </p>
+              
+              {/* Glow Effect on Hover */}
+              <div className={cn(
+                "absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none",
+                feature.color.replace('text-', 'bg-')
+              )} />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
