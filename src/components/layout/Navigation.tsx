@@ -23,17 +23,16 @@ export function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-dark/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative h-12 w-auto overflow-hidden">
-            <Image 
-              src="/images/kelagam-logo.png" 
-              alt="Kelagam Technologies" 
-              width={220}
-              height={48}
-              className="object-contain h-12 w-auto"
-              priority
-            />
-          </div>
+        <Link href="/" className="flex items-center gap-2 group">
+          <Image 
+            src="/Kelegram-logo&icon.png" 
+            alt="Kelagam Technologies" 
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain"
+            priority
+          />
+          <span className="font-display text-xl font-bold text-white hidden sm:block">Kelagam</span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -56,12 +56,12 @@ export function PlatformDetailCard({
             transition={{ duration: 0.6 }}
             className={cn(align === 'right' && "lg:col-start-2")}
           >
-            <div className={cn("inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border mb-8", colors[gradientColor])}>
-              {badge}
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20 bg-white/5 mb-8">
+              <span className="text-gradient">{badge}</span>
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient mb-4">{title}</h2>
-            <p className={cn("text-xl font-medium mb-8", colors[gradientColor].split(' ')[0])}>{tagline}</p>
+            <p className="text-xl font-medium mb-8 text-gradient">{tagline}</p>
             
             <p className="text-light/80 text-lg leading-relaxed mb-10">
               {description}

@@ -77,7 +77,7 @@
 
 /* Custom Utilities */
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light via-secondary to-accent;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#4fd1c5] via-[#81e6d9] to-[#fbd38d];
 }
 
 .text-gradient-animated {

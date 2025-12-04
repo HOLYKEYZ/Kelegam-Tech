@@ -62,7 +62,7 @@ export function PlatformCard({
     >
       {/* Badge */}
       <div className="mb-6">
-        <span className={cn("px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border", badgeColors[gradientColor])}>
+        <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20 bg-white/5 text-gradient">
           {badge}
         </span>
       </div>
@@ -74,7 +74,7 @@ export function PlatformCard({
         </div>
         <div>
           <h3 className="font-display text-2xl font-bold text-gradient">{title}</h3>
-          <p className={cn("text-sm font-medium", iconColors[gradientColor])}>{tagline}</p>
+          <p className="text-sm font-medium text-gradient">{tagline}</p>
         </div>
       </div>
 

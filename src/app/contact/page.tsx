@@ -46,7 +46,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             className="max-w-xl mx-auto w-full relative z-10"
           >
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Let's Build Together</h1>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Let's <span className="text-gradient">Build Together</span></h1>
             <p className="text-light/70 mb-8 text-lg">Tell us about your project and we'll get back to you within 24 hours</p>
 
             <div className="bg-dark-card border border-white/5 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
@@ -168,21 +168,6 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-dark-card border border-white/5 p-6 rounded-xl hover:border-accent/30 transition-colors group"
-              >
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-bold text-white">Visit Us</h3>
-                </div>
-                <p className="text-light/70 pl-14">Lagos, Nigeria</p>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 }}
                 className="bg-dark-card border border-white/5 p-6 rounded-xl hover:border-white/20 transition-colors group"
               >
                 <div className="flex items-center gap-4 mb-2">

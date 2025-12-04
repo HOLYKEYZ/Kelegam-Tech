@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   title: "Kelagam Technologies | Enterprise Software & AI Engineering",
   description: "Modern software and AI engineering company building secure, scalable digital platforms for enterprises, institutions, and governments across Africa.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/Kelegram-logo&icon.png",
+    shortcut: "/Kelegram-logo&icon.png",
+    apple: "/Kelegram-logo&icon.png",
   },
 };
 

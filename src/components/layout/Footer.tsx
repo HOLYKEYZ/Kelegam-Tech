@@ -1,5 +1,6 @@
+import { Mail, Phone } from "lucide-react"
 import Link from "next/link"
-import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react"
+
 
 export function Footer() {
   return (
@@ -94,17 +95,6 @@ export function Footer() {
           {/* Column 4: Connect */}
           <div>
             <h3 className="font-display text-xl font-bold mb-6 text-white">Connect</h3>
-            <div className="flex space-x-4 mb-6">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 hover:border-primary/30">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 hover:border-primary/30">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 hover:border-primary/30">
-                <Github className="w-5 h-5" />
-              </a>
-            </div>
             <div className="space-y-3 text-light/70">
               <a href="mailto:info@kelagamtechnologies.com" className="flex items-center hover:text-secondary transition-colors group">
                 <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
