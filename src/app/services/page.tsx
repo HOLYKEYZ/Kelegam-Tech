@@ -167,7 +167,7 @@ export default function ServicesPage() {
                     <service.icon className="w-7 h-7" />
                   </div>
                   
-                  <h3 className="font-display text-2xl font-bold text-white mb-4 group-hover:text-primary-light transition-colors">
+                  <h3 className="font-display text-2xl font-bold text-secondary mb-4 group-hover:text-white transition-colors">
                     {service.title}
                   </h3>
                   
@@ -175,16 +175,10 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   
-                  <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-white/40 group-hover:text-primary/80 transition-colors">
+                  <div className="pt-6 border-t border-white/5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-secondary">
                       {categories.find(c => c.id === service.category)?.label}
                     </span>
-                    <Link 
-                      href="/contact" 
-                      className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-primary group-hover:text-white transition-all duration-300"
-                    >
-                      <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                    </Link>
                   </div>
                 </div>
               </motion.div>

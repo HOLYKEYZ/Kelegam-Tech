@@ -99,3 +99,28 @@
 .animate-gradient {
   animation: gradient 3s linear infinite;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--dark));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary-light));
+  border-radius: 5px;
+  border: 2px solid hsl(var(--dark));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary));
+}
+
+/* Custom Text Selection */
+::selection {
+  background: hsl(var(--primary));
+  color: white;
+}

@@ -60,7 +60,7 @@ export function PlatformDetailCard({
               {badge}
             </div>
 
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">{title}</h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient mb-4">{title}</h2>
             <p className={cn("text-xl font-medium mb-8", colors[gradientColor].split(' ')[0])}>{tagline}</p>
             
             <p className="text-light/80 text-lg leading-relaxed mb-10">

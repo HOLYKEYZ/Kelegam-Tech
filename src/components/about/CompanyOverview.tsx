@@ -14,18 +14,18 @@ export function CompanyOverview() {
   ]
 
   return (
-    <section className="py-24 bg-dark relative overflow-hidden">
+    <section className="py-20 bg-dark relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary mb-6">
               Engineering the digital infrastructure powering Africa's transformation
             </h2>
-            <p className="text-light/80 text-lg leading-relaxed mb-6">
+            <p className="text-light/80 text-lg leading-relaxed mb-4">
               Kelagam Technologies is a Nigerian digital systems engineering company focused on delivering enterprise software, AI-powered infrastructure, and next-generation platforms for organizations of all sizes.
             </p>
             <p className="text-light/70 leading-relaxed">
@@ -42,9 +42,9 @@ export function CompanyOverview() {
             {areas.map((area, index) => (
               <div 
                 key={index}
-                className="bg-dark-card border border-white/5 rounded-xl p-6 flex flex-col items-center text-center hover:border-primary/30 transition-colors group"
+                className="bg-dark-card border border-white/5 rounded-xl p-5 flex flex-col items-center text-center hover:border-secondary/30 transition-colors group"
               >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-3 group-hover:scale-110 transition-transform">
                   <area.icon className="w-5 h-5" />
                 </div>
                 <span className="text-sm font-medium text-light/90">{area.label}</span>

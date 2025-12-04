@@ -15,7 +15,7 @@ export function PlatformsShowcase() {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-4xl font-bold text-white mb-4"
           >
-            Our Digital Platforms
+            Our Digital <span className="text-gradient">Platforms</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

@@ -37,124 +37,93 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-64px)]">
         
         {/* Left Side: Form */}
-        <div className="bg-dark p-8 lg:p-16 flex flex-col justify-center">
+        <div className="bg-dark p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="max-w-xl mx-auto w-full"
+            className="max-w-xl mx-auto w-full relative z-10"
           >
-            <h1 className="font-display text-4xl font-bold text-white mb-4">Let's Build Together</h1>
-            <p className="text-light/70 mb-8">Tell us about your project and we'll get back to you within 24 hours</p>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Let's Build Together</h1>
+            <p className="text-light/70 mb-8 text-lg">Tell us about your project and we'll get back to you within 24 hours</p>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-dark-card border border-white/5 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-white">Name</label>
+                    <input 
+                      {...register("name")}
+                      className={cn("w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30", errors.name && "border-red-500")}
+                      placeholder="John Doe"
+                    />
+                    {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-white">Email</label>
+                    <input 
+                      {...register("email")}
+                      className={cn("w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30", errors.email && "border-red-500")}
+                      placeholder="john@example.com"
+                    />
+                    {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-white">Organization (Optional)</label>
+                    <input 
+                      {...register("organization")}
+                      className="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30"
+                      placeholder="Company Ltd"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-white">Phone (Optional)</label>
+                    <input 
+                      {...register("phone")}
+                      className="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30"
+                      placeholder="+234..."
+                    />
+                  </div>
+                </div>
+
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Name</label>
-                  <input 
-                    {...register("name")}
-                    className={cn("w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white", errors.name && "border-red-500")}
-                    placeholder="John Doe"
+                  <label className="text-sm font-medium text-white">Message</label>
+                  <textarea 
+                    {...register("message")}
+                    rows={4}
+                    className={cn("w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white resize-none placeholder:text-light/30", errors.message && "border-red-500")}
+                    placeholder="Tell us about your project requirements..."
                   />
-                  {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
+                  {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Email</label>
+
+                <div className="flex items-start gap-3">
                   <input 
-                    {...register("email")}
-                    className={cn("w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white", errors.email && "border-red-500")}
-                    placeholder="john@example.com"
+                    type="checkbox"
+                    {...register("consent")}
+                    id="consent"
+                    className="mt-1 w-4 h-4 rounded border-white/10 bg-dark/50 text-primary focus:ring-primary"
                   />
-                  {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
+                  <label htmlFor="consent" className="text-sm text-light/70">
+                    I agree to be contacted about this inquiry.
+                  </label>
                 </div>
-              </div>
+                {errors.consent && <p className="text-xs text-red-500">{errors.consent.message}</p>}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Organization (Optional)</label>
-                  <input 
-                    {...register("organization")}
-                    className="w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white"
-                    placeholder="Company Ltd"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Phone (Optional)</label>
-                  <input 
-                    {...register("phone")}
-                    className="w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white"
-                    placeholder="+234..."
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Service Interest</label>
-                  <select 
-                    {...register("service")}
-                    className={cn("w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white appearance-none", errors.service && "border-red-500")}
-                  >
-                    <option value="">Select a service...</option>
-                    <option value="Enterprise Software">Enterprise Software</option>
-                    <option value="AI/Automation">AI/Automation</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                    <option value="Cloud Services">Cloud Services</option>
-                    <option value="Platform Development">Platform Development</option>
-                    <option value="Systems Integration">Systems Integration</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  {errors.service && <p className="text-xs text-red-500">{errors.service.message}</p>}
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Budget (Optional)</label>
-                  <select 
-                    {...register("budget")}
-                    className="w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white appearance-none"
-                  >
-                    <option value="">Select range...</option>
-                    <option value="< $10k">&lt; $10k</option>
-                    <option value="$10k-$50k">$10k-$50k</option>
-                    <option value="$50k-$100k">$50k-$100k</option>
-                    <option value="$100k-$500k">$100k-$500k</option>
-                    <option value="$500k+">$500k+</option>
-                    <option value="Not Sure">Not Sure</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-white">Message</label>
-                <textarea 
-                  {...register("message")}
-                  rows={4}
-                  className={cn("w-full px-4 py-3 bg-dark-card border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white resize-none", errors.message && "border-red-500")}
-                  placeholder="Tell us about your project requirements..."
-                />
-                {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
-              </div>
-
-              <div className="flex items-start gap-3">
-                <input 
-                  type="checkbox"
-                  {...register("consent")}
-                  id="consent"
-                  className="mt-1 w-4 h-4 rounded border-white/10 bg-dark-card text-primary focus:ring-primary"
-                />
-                <label htmlFor="consent" className="text-sm text-light/70">
-                  I agree to be contacted about this inquiry.
-                </label>
-              </div>
-              {errors.consent && <p className="text-xs text-red-500">{errors.consent.message}</p>}
-
-              <button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(var(--primary),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary),0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+            </div>
           </motion.div>
         </div>
 
@@ -222,7 +191,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-bold text-white">Business Hours</h3>
                 </div>
-                <p className="text-light/70 pl-14">Monday - Friday: 9:00 AM - 6:00 PM WAT</p>
+                <p className="text-light/70 pl-14">Always Available</p>
               </motion.div>
             </div>
           </div>

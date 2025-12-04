@@ -3,8 +3,12 @@ import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-dark-lighter border-t border-white/10 pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-dark-lighter border-t border-white/10 pt-16 pb-8 relative overflow-hidden">
+      {/* Background Texture */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Column 1: Company */}
           <div>
@@ -16,15 +20,15 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about#mission" className="hover:text-secondary transition-colors">
+                <Link href="/about" className="hover:text-secondary transition-colors">
                   Mission & Vision
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/careers" className="hover:text-secondary transition-colors">
                   Careers
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="hover:text-secondary transition-colors">
                   Contact
@@ -80,7 +84,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-secondary transition-colors underline">
+                <Link href="/services" className="hover:text-secondary transition-colors underline decoration-secondary/30 hover:decoration-secondary">
                   View All Services
                 </Link>
               </li>
@@ -91,35 +95,31 @@ export function Footer() {
           <div>
             <h3 className="font-display text-xl font-bold mb-6 text-white">Connect</h3>
             <div className="flex space-x-4 mb-6">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 hover:border-primary/30">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 hover:border-primary/30">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-dark-card p-2 rounded-full hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 hover:border-primary/30">
                 <Github className="w-5 h-5" />
               </a>
             </div>
             <div className="space-y-3 text-light/70">
-              <a href="mailto:info@kelagamtechnologies.com" className="flex items-center hover:text-secondary transition-colors">
-                <Mail className="w-4 h-4 mr-2" />
+              <a href="mailto:info@kelagamtechnologies.com" className="flex items-center hover:text-secondary transition-colors group">
+                <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 info@kelagamtechnologies.com
               </a>
-              <a href="tel:+2348076735750" className="flex items-center hover:text-secondary transition-colors">
-                <Phone className="w-4 h-4 mr-2" />
+              <a href="tel:+2348076735750" className="flex items-center hover:text-secondary transition-colors group">
+                <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 +234 807 673 5750
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-light/50">
-          <p>&copy; {new Date().getFullYear()} Kelagam Technologies. Built with precision.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-light transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-light transition-colors">Terms of Service</Link>
-          </div>
+        <div className="pt-8 border-t border-white/10 text-center text-sm text-light/50">
+          <p>&copy; {new Date().getFullYear()} Kelagam Technologies.</p>
         </div>
       </div>
     </footer>

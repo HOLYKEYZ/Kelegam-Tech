@@ -73,7 +73,7 @@ export function PlatformCard({
           <Icon className="w-8 h-8" />
         </div>
         <div>
-          <h3 className="font-display text-2xl font-bold text-white">{title}</h3>
+          <h3 className="font-display text-2xl font-bold text-gradient">{title}</h3>
           <p className={cn("text-sm font-medium", iconColors[gradientColor])}>{tagline}</p>
         </div>
       </div>
