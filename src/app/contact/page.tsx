@@ -146,7 +146,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-bold text-gray-900 dark:text-white">Email Us</h3>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 pl-14 break-all text-sm">info@kelagamtechnologies.com</p>
+                <p className="text-gray-600 dark:text-gray-400 pl-14 break-all text-sm">info@kelagam.com</p>
               </motion.div>
 
               <motion.div 

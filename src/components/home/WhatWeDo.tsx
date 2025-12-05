@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils"
 const features = [
   {
     icon: Brain,
-    title: "Operational Intelligence",
-    description: "Real-time insights and analytics that transform raw data into actionable intelligence for smarter decision-making across your organization.",
+    title: "Operational Analytics",
+    description: "Real-time data-driven operations that transform raw data into actionable intelligence for smarter decision-making across your organization.",
     color: "text-primary",
     bg: "bg-primary/10",
     border: "group-hover:border-primary/50",
@@ -34,8 +34,8 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Secure Digital Transformation",
-    description: "Enterprise-grade security architecture built into every layer, ensuring your digital transformation journey is protected from day one.",
+    title: "Enterprise-grade Data Platforms",
+    description: "Scalable cloud infrastructure built into every layer, ensuring your digital transformation journey is protected from day one.",
     color: "text-primary",
     bg: "bg-primary/10",
     border: "group-hover:border-primary/50",

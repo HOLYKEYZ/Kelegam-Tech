@@ -22,7 +22,7 @@ export function Hero() {
 
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none z-0" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/10 dark:bg-primary/20 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-secondary/10 dark:bg-primary/10 rounded-full blur-[120px] pointer-events-none z-0" />
       
       <div className="container mx-auto px-4 relative z-10 text-center">
         {/* Badge */}
@@ -52,7 +52,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Kelagam Technologies is a modern software and AI engineering company building secure, scalable, and intelligent digital platforms for enterprises, institutions, and governments.
+          Kelagam Technologies — Modern Software & AI Engineering for Enterprises & Institutions. We build secure, scalable, and intelligent digital platforms.
         </motion.p>
 
         {/* CTAs */}

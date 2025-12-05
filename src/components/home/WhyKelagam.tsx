@@ -32,7 +32,7 @@ const reasons = [
   {
     icon: Check,
     title: "Proven Multi-Sector Expertise",
-    description: "Successful deployments across government, education, healthcare, finance, and enterprise sectors."
+    description: "Successful deployments across commercial enterprises, institutions, and financial sectors."
   }
 ]
 

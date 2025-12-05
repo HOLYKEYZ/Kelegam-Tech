@@ -8,7 +8,7 @@ export function CompanyOverview() {
     { icon: Code, label: "Software Engineering" },
     { icon: Cloud, label: "Cloud Computing" },
     { icon: Bot, label: "AI & Process Automation" },
-    { icon: Shield, label: "Cybersecurity" },
+    { icon: Shield, label: "Data Privacy" },
     { icon: Database, label: "Data Infrastructure" },
     { icon: Network, label: "Large-scale Digital Coordination" },
   ]

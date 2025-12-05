@@ -21,15 +21,15 @@ const services = [
   },
   {
     icon: ShieldAlert,
-    title: "Cybersecurity & Digital Risk Protection",
-    description: "Comprehensive security services including penetration testing, vulnerability assessments, infrastructure protection, identity and access management, threat monitoring, and digital risk defense.",
+    title: "Data Privacy & Encryption Services",
+    description: "Enterprise-grade data protection including encryption standards, privacy compliance frameworks, identity management, and secure access protocols for sensitive information.",
     category: "security"
   },
   {
     icon: Server,
     title: "Digital Infrastructure Engineering",
     description: "High-performance digital backbones for institutions and large organizations. Cloud architecture, on-premise infrastructure, hybrid systems, load balancing, and redundancy planning.",
-    category: "infrastructure"
+    category: "cloud-arch"
   },
   {
     icon: Boxes,
@@ -40,8 +40,8 @@ const services = [
   {
     icon: CloudCog,
     title: "Cloud & DevOps Services",
-    description: "Cloud architecture design, migration services, infrastructure automation with Terraform/Ansible, CI/CD pipeline setup, containerization with Docker/Kubernetes, and high-availability systems.",
-    category: "infrastructure"
+    description: "Scalable Cloud Infrastructure design, migration services, automation with Terraform/Ansible, CI/CD pipeline setup, containerization with Docker/Kubernetes, and high-availability systems.",
+    category: "cloud-arch"
   },
   {
     icon: IdCard,
@@ -53,18 +53,18 @@ const services = [
     icon: Cpu,
     title: "IoT & Smart Infrastructure Integration",
     description: "Deployment and integration of smart sensors, GPS tracking devices, RFID systems, and operational IoT systems. Edge computing, real-time data processing, and device management platforms.",
-    category: "infrastructure"
+    category: "support"
   },
   {
     icon: BarChart,
-    title: "Data Analytics & Decision Support Systems",
+    title: "Operational Analytics / Data-Driven Operations",
     description: "Business intelligence dashboards, geo-visualizations, analytics engines, predictive models, and reporting tools. Transform raw data into actionable insights with modern data warehousing.",
     category: "analytics"
   },
   {
     icon: Building,
-    title: "Smart City & eGovernance Solutions",
-    description: "Urban digital systems, municipal operations tools, connected governance platforms, citizen services portals, and public infrastructure management systems.",
+    title: "Smart City & Institutional Solutions",
+    description: "Urban digital systems, municipal operations tools, connected platforms, service portals, and public infrastructure management systems.",
     category: "software"
   },
   {
@@ -92,6 +92,7 @@ const categories = [
   { id: "software", label: "Software & Development" },
   { id: "ai", label: "AI & Automation" },
   { id: "security", label: "Security & Infrastructure" },
+  { id: "cloud-arch", label: "Cloud & Architecture" },
   { id: "analytics", label: "Analytics & Data" },
   { id: "support", label: "Deployment & Support" }
 ]
@@ -102,7 +103,7 @@ export default function ServicesPage() {
   const filteredServices = activeCategory === "all" 
     ? services 
     : services.filter(s => {
-        if (activeCategory === "security") return s.category === "security" || s.category === "infrastructure"
+        if (activeCategory === "security") return s.category === "security"
         return s.category === activeCategory
       })
 
@@ -158,7 +159,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group relative bg-gray-50 dark:bg-gradient-to-b dark:from-white/[0.08] dark:to-white/[0.02] border border-gray-200 dark:border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(var(--primary),0.15)]"
+                className="group relative bg-gray-50 dark:bg-[#1c2128] border border-gray-200 dark:border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(var(--primary),0.15)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
                 
@@ -188,20 +189,20 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark to-secondary opacity-90" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
+      <section className="py-24 relative overflow-hidden bg-gray-50 dark:bg-[#0D1117] border-t border-gray-200 dark:border-white/5">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 dark:from-primary/10 dark:to-secondary/10" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 dark:opacity-20" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Ready to Build the Future?
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">
             Let's discuss how our engineering expertise can solve your most complex challenges.
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center justify-center rounded-full text-base font-bold bg-white text-primary hover:bg-gray-100 h-14 px-10 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center rounded-full text-base font-bold bg-primary text-white hover:bg-primary-dark dark:bg-white dark:text-primary dark:hover:bg-gray-100 h-14 px-10 shadow-lg shadow-primary/20 hover:shadow-primary/40 dark:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300 transform hover:-translate-y-1"
           >
             Start a Conversation
           </Link>

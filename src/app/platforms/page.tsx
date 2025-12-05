@@ -21,11 +21,11 @@ export default function PlatformsPage() {
       </section>
 
       <PlatformDetailCard
-        id="uros"
+        id="eis"
         badge="⭐ Flagship Platform"
-        title="UROS"
-        tagline="Unified Resource & Operations Suite"
-        description="UROS is a powerful digital operations suite that helps organizations manage complex workflows, coordinate resources, and improve real-time operational efficiency. It is modular, scalable, and built to adapt to enterprise and government needs. UROS brings structure, clarity, and intelligence to any organization."
+        title="EIS"
+        tagline="Emergency Intelligence System"
+        description="EIS is a powerful digital operations suite that helps organizations manage complex workflows, coordinate resources, and improve real-time operational efficiency. It is modular, scalable, and built to adapt to enterprise and institutional needs. EIS brings structure, clarity, and intelligence to any organization."
         imageSrc="/images/uros.png"
         capabilities={[
           "Workflow automation",
@@ -62,7 +62,7 @@ export default function PlatformsPage() {
         badge="⭐ EdTech Infrastructure"
         title="EduConnect"
         tagline="Smart Education Infrastructure System"
-        description="EduConnect provides a unified digital backbone for managing school operations at scale. Designed for state and institutional use."
+        description="EduConnect provides a unified digital backbone for managing school operations at scale. Designed for institutional use."
         imageSrc="/images/educonnect.png"
         capabilities={[
           "Teacher deployment",

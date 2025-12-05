@@ -1,15 +1,15 @@
 import { Server } from "lucide-react"
 import { PlatformDetailCard } from "@/components/platforms/PlatformDetailCard"
 
-export default function UrosPage() {
+export default function EisPage() {
   return (
     <div className="flex flex-col min-h-screen pt-16 bg-white dark:bg-[#0D1117]">
       <PlatformDetailCard
-        id="uros"
+        id="eis"
         badge="⭐ Flagship Platform"
-        title="UROS"
-        tagline="Unified Resource & Operations Suite"
-        description="UROS is a powerful digital operations suite that helps organizations manage complex workflows, coordinate resources, and improve real-time operational efficiency. Built modular and scalable to adapt to enterprise and government needs."
+        title="EIS"
+        tagline="Emergency Intelligence System"
+        description="EIS is a powerful digital operations suite that helps organizations manage complex workflows, coordinate resources, and improve real-time operational efficiency. Built modular and scalable to adapt to enterprise and institutional needs."
         imageSrc="/images/uros.png"
         capabilities={[
           "Workflow automation engine",

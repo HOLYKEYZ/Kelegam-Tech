@@ -38,8 +38,8 @@ export function Footer() {
             <h3 className="font-display text-xl font-bold mb-6 text-gray-900 dark:text-white">Platforms</h3>
             <ul className="space-y-4 text-gray-600 dark:text-gray-300">
               <li>
-                <Link href="/platforms/uros" className="hover:text-primary transition-colors">
-                  UROS
+                <Link href="/platforms/eis" className="hover:text-primary transition-colors">
+                  EIS
                 </Link>
               </li>
               <li>
@@ -71,7 +71,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/services" className="hover:text-secondary transition-colors">
-                  Cybersecurity
+                  Data Privacy
                 </Link>
               </li>
               <li>
@@ -91,9 +91,9 @@ export function Footer() {
           <div>
             <h3 className="font-display text-xl font-bold mb-6 text-gray-900 dark:text-white">Connect</h3>
             <div className="space-y-3 text-gray-600 dark:text-gray-300">
-              <a href="mailto:info@kelagamtechnologies.com" className="flex items-center hover:text-secondary transition-colors group">
+              <a href="mailto:info@kelagam.com" className="flex items-center hover:text-secondary transition-colors group">
                 <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                info@kelagamtechnologies.com
+                info@kelagam.com
               </a>
               <a href="tel:+2348076735750" className="flex items-center hover:text-secondary transition-colors group">
                 <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
