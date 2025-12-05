@@ -6,14 +6,14 @@ import { PlatformCard } from "@/components/shared/PlatformCard"
 
 export function PlatformsShowcase() {
   return (
-    <section className="py-24 bg-dark relative">
+    <section className="py-24 bg-white dark:bg-[#0D1117] relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-3xl md:text-4xl font-bold text-white mb-4"
+            className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
             Our Digital <span className="text-gradient">Platforms</span>
           </motion.h2>
@@ -22,7 +22,7 @@ export function PlatformsShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-light/70 text-lg max-w-2xl mx-auto"
+            className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto"
           >
             Enterprise-grade solutions built for scale, performance, and real-world impact
           </motion.p>

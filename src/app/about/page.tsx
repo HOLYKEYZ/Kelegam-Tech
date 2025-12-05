@@ -7,10 +7,10 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen pt-16">
       {/* Hero */}
-      <section className="bg-dark py-16 border-b border-white/5 relative overflow-hidden">
+      <section className="bg-gray-50 dark:bg-[#0D1117] py-16 border-b border-gray-200 dark:border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-radial from-secondary/10 to-transparent opacity-50 pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
             About <span className="text-gradient">Kelagam Technologies</span>
           </h1>
           <p className="text-lg text-secondary max-w-3xl mx-auto">

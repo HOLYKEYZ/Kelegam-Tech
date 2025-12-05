@@ -37,7 +37,7 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-64px)]">
         
         {/* Left Side: Form */}
-        <div className="bg-dark p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
+        <div className="bg-gray-50 dark:bg-[#0D1117] p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
           
           <motion.div
@@ -46,26 +46,26 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             className="max-w-xl mx-auto w-full relative z-10"
           >
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Let's <span className="text-gradient">Build Together</span></h1>
-            <p className="text-light/70 mb-8 text-lg">Tell us about your project and we'll get back to you within 24 hours</p>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Let's <span className="text-gradient">Build Together</span></h1>
+            <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg">Tell us about your project and we'll get back to you within 24 hours</p>
 
-            <div className="bg-dark-card border border-white/5 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
+            <div className="bg-white dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-white">Name</label>
+                    <label className="text-sm font-medium text-gray-900 dark:text-white">Name</label>
                     <input 
                       {...register("name")}
-                      className={cn("w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30", errors.name && "border-red-500")}
+                      className={cn("w-full px-4 py-3 bg-gray-100 dark:bg-[#0D1117]/50 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500", errors.name && "border-red-500")}
                       placeholder="John Doe"
                     />
                     {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-white">Email</label>
+                    <label className="text-sm font-medium text-gray-900 dark:text-white">Email</label>
                     <input 
                       {...register("email")}
-                      className={cn("w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30", errors.email && "border-red-500")}
+                      className={cn("w-full px-4 py-3 bg-gray-100 dark:bg-[#0D1117]/50 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500", errors.email && "border-red-500")}
                       placeholder="john@example.com"
                     />
                     {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
@@ -74,29 +74,29 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-white">Organization (Optional)</label>
+                    <label className="text-sm font-medium text-gray-900 dark:text-white">Organization (Optional)</label>
                     <input 
                       {...register("organization")}
-                      className="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30"
+                      className="w-full px-4 py-3 bg-gray-100 dark:bg-[#0D1117]/50 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
                       placeholder="Company Ltd"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-white">Phone (Optional)</label>
+                    <label className="text-sm font-medium text-gray-900 dark:text-white">Phone (Optional)</label>
                     <input 
                       {...register("phone")}
-                      className="w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white placeholder:text-light/30"
+                      className="w-full px-4 py-3 bg-gray-100 dark:bg-[#0D1117]/50 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
                       placeholder="+234..."
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white">Message</label>
+                  <label className="text-sm font-medium text-gray-900 dark:text-white">Message</label>
                   <textarea 
                     {...register("message")}
                     rows={4}
-                    className={cn("w-full px-4 py-3 bg-dark/50 border border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-white resize-none placeholder:text-light/30", errors.message && "border-red-500")}
+                    className={cn("w-full px-4 py-3 bg-gray-100 dark:bg-[#0D1117]/50 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-primary transition-colors text-gray-900 dark:text-white resize-none placeholder:text-gray-400 dark:placeholder:text-gray-500", errors.message && "border-red-500")}
                     placeholder="Tell us about your project requirements..."
                   />
                   {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
@@ -107,9 +107,9 @@ export default function ContactPage() {
                     type="checkbox"
                     {...register("consent")}
                     id="consent"
-                    className="mt-1 w-4 h-4 rounded border-white/10 bg-dark/50 text-primary focus:ring-primary"
+                    className="mt-1 w-4 h-4 rounded border-gray-300 dark:border-white/10 bg-gray-100 dark:bg-[#0D1117]/50 text-primary focus:ring-primary"
                   />
-                  <label htmlFor="consent" className="text-sm text-light/70">
+                  <label htmlFor="consent" className="text-sm text-gray-600 dark:text-gray-400">
                     I agree to be contacted about this inquiry.
                   </label>
                 </div>
@@ -128,7 +128,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right Side: Contact Info */}
-        <div className="bg-dark-lighter p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
+        <div className="bg-white dark:bg-[#161b22] p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -138,45 +138,45 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-dark-card border border-white/5 p-6 rounded-xl hover:border-primary/30 transition-colors group"
+                className="bg-gray-50 dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-primary/30 transition-colors group"
               >
                 <div className="flex items-center gap-4 mb-2">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white">Email Us</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white">Email Us</h3>
                 </div>
-                <p className="text-light/70 pl-14 break-all text-sm">info@kelagamtechnologies.com</p>
+                <p className="text-gray-600 dark:text-gray-400 pl-14 break-all text-sm">info@kelagamtechnologies.com</p>
               </motion.div>
 
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="bg-dark-card border border-white/5 p-6 rounded-xl hover:border-secondary/30 transition-colors group"
+                className="bg-gray-50 dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-secondary/30 transition-colors group"
               >
                 <div className="flex items-center gap-4 mb-2">
                   <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white">Call Us</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white">Call Us</h3>
                 </div>
-                <p className="text-light/70 pl-14">+234 807 673 5750</p>
+                <p className="text-gray-600 dark:text-gray-400 pl-14">+234 807 673 5750</p>
               </motion.div>
 
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-dark-card border border-white/5 p-6 rounded-xl hover:border-white/20 transition-colors group"
+                className="bg-gray-50 dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 p-6 rounded-xl hover:border-gray-300 dark:hover:border-white/20 transition-colors group"
               >
                 <div className="flex items-center gap-4 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-white/10 flex items-center justify-center text-gray-700 dark:text-white group-hover:scale-110 transition-transform">
                     <Clock className="w-5 h-5" />
                   </div>
-                  <h3 className="font-bold text-white">Business Hours</h3>
+                  <h3 className="font-bold text-gray-900 dark:text-white">Business Hours</h3>
                 </div>
-                <p className="text-light/70 pl-14">Always Available</p>
+                <p className="text-gray-600 dark:text-gray-400 pl-14">Always Available</p>
               </motion.div>
             </div>
           </div>

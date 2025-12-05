@@ -3,7 +3,7 @@ import { PlatformDetailCard } from "@/components/platforms/PlatformDetailCard"
 
 export default function EduConnectPage() {
   return (
-    <div className="flex flex-col min-h-screen pt-16">
+    <div className="flex flex-col min-h-screen pt-16 bg-white dark:bg-[#0D1117]">
       <PlatformDetailCard
         id="educonnect"
         badge="🎓 EdTech Infrastructure"

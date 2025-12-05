@@ -63,14 +63,14 @@ const features = [
 
 export function WhatWeDo() {
   return (
-    <section className="py-24 bg-dark-lighter relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-[#161b22] relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-3xl md:text-4xl font-bold text-white mb-4"
+            className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
             What We Do
           </motion.h2>
@@ -79,7 +79,7 @@ export function WhatWeDo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-light/70 text-lg max-w-2xl mx-auto"
+            className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto"
           >
             We develop powerful digital platforms that drive transformation
           </motion.p>
@@ -94,7 +94,7 @@ export function WhatWeDo() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className={cn(
-                "group relative p-8 rounded-2xl bg-dark-card border border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl",
+                "group relative p-8 rounded-2xl bg-gray-50 dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl",
                 feature.border,
                 feature.shadow
               )}
@@ -102,10 +102,10 @@ export function WhatWeDo() {
               <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3", feature.bg, feature.color)}>
                 <feature.icon className="w-7 h-7" />
               </div>
-              <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
+              <h3 className="font-display text-xl font-bold text-gray-900 dark:text-white mb-3 transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-light/70 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
               

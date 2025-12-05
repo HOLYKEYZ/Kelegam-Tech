@@ -38,7 +38,7 @@ const reasons = [
 
 export function WhyKelagam() {
   return (
-    <section className="py-24 bg-dark-lighter relative overflow-hidden">
+    <section className="py-24 bg-gray-50 dark:bg-[#161b22] relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column: Content */}
@@ -47,7 +47,7 @@ export function WhyKelagam() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-3xl md:text-4xl font-bold text-white mb-8"
+              className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8"
             >
               Why Partner With Kelagam
             </motion.h2>
@@ -66,13 +66,13 @@ export function WhyKelagam() {
                   className="flex gap-6 relative group"
                 >
                   <div className="flex-shrink-0 mt-1 relative z-10">
-                    <div className="w-8 h-8 rounded-full bg-dark border border-secondary/30 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-dark transition-all duration-300 shadow-[0_0_15px_rgba(59,206,172,0.3)] group-hover:shadow-[0_0_20px_rgba(59,206,172,0.6)]">
+                    <div className="w-8 h-8 rounded-full bg-white dark:bg-[#0D1117] border border-secondary/30 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white dark:group-hover:text-[#0D1117] transition-all duration-300 shadow-[0_0_15px_rgba(59,206,172,0.3)] group-hover:shadow-[0_0_20px_rgba(59,206,172,0.6)]">
                       <reason.icon className="w-4 h-4" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-secondary mb-2 group-hover:text-white transition-colors">{reason.title}</h3>
-                    <p className="text-light/70 text-sm leading-relaxed max-w-md">{reason.description}</p>
+                    <h3 className="font-bold text-secondary mb-2 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">{reason.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-md">{reason.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -96,12 +96,12 @@ export function WhyKelagam() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 + 0.3 }}
-                  className="bg-dark-card border border-white/10 rounded-xl p-8 text-center hover:border-secondary/50 transition-colors group hover:bg-secondary/5"
+                  className="bg-white dark:bg-[#1c2128] border border-gray-200 dark:border-white/10 rounded-xl p-8 text-center hover:border-secondary/50 transition-colors group hover:bg-secondary/5"
                 >
-                  <div className="text-4xl md:text-5xl font-display font-bold text-white mb-3 text-gradient group-hover:scale-110 transition-transform duration-300 inline-block">
+                  <div className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-3 text-gradient group-hover:scale-110 transition-transform duration-300 inline-block">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-light/60 uppercase tracking-widest font-bold">
+                  <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-widest font-bold">
                     {stat.label}
                   </div>
                 </motion.div>

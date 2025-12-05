@@ -35,10 +35,10 @@ export function PlatformDetailCard({
   }
 
   return (
-    <section id={id} className="py-24 border-b border-white/5 last:border-0 relative overflow-hidden">
+    <section id={id} className="py-24 border-b border-gray-200 dark:border-white/5 last:border-0 relative overflow-hidden bg-white dark:bg-transparent">
       {/* Background Glow */}
       <div className={cn(
-        "absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[120px] opacity-20 pointer-events-none",
+        "absolute top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 dark:opacity-20 pointer-events-none",
         align === 'left' ? "right-0 translate-x-1/2" : "left-0 -translate-x-1/2",
         gradientColor === 'primary' && "bg-primary",
         gradientColor === 'secondary' && "bg-secondary",
@@ -56,22 +56,22 @@ export function PlatformDetailCard({
             transition={{ duration: 0.6 }}
             className={cn(align === 'right' && "lg:col-start-2")}
           >
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/20 bg-white/5 mb-8">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/5 mb-8">
               <span className="text-gradient">{badge}</span>
             </div>
 
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient mb-4">{title}</h2>
             <p className="text-xl font-medium mb-8 text-gradient">{tagline}</p>
             
-            <p className="text-light/80 text-lg leading-relaxed mb-10">
+            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-10">
               {description}
             </p>
 
             <div className="space-y-6">
-              <h3 className="text-white font-bold text-lg uppercase tracking-wide border-b border-white/10 pb-2 inline-block">Key Capabilities</h3>
+              <h3 className="text-gray-900 dark:text-white font-bold text-lg uppercase tracking-wide border-b border-gray-200 dark:border-white/10 pb-2 inline-block">Key Capabilities</h3>
               <ul className="grid grid-cols-1 gap-4">
                 {capabilities.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-light/90">
+                  <li key={index} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
                     <div className={cn("mt-1 p-0.5 rounded-full", colors[gradientColor])}>
                       <Check className="w-3 h-3" />
                     </div>
@@ -89,12 +89,12 @@ export function PlatformDetailCard({
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className={cn(
-              "relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group",
+              "relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl group",
               align === 'right' && "lg:col-start-1"
             )}
           >
             <div className={cn(
-              "absolute inset-0 opacity-20 transition-opacity duration-500 group-hover:opacity-10",
+              "absolute inset-0 opacity-10 dark:opacity-20 transition-opacity duration-500 group-hover:opacity-5 dark:group-hover:opacity-10",
               gradientColor === 'primary' && "bg-primary",
               gradientColor === 'secondary' && "bg-secondary",
               gradientColor === 'accent' && "bg-accent"
@@ -108,10 +108,11 @@ export function PlatformDetailCard({
             />
             
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 dark:from-[#0D1117]/80 via-transparent to-transparent" />
           </motion.div>
         </div>
       </div>
     </section>
   )
 }
+

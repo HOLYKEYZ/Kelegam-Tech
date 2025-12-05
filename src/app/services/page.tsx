@@ -107,7 +107,7 @@ export default function ServicesPage() {
       })
 
   return (
-    <div className="flex flex-col min-h-screen pt-16 bg-dark">
+    <div className="flex flex-col min-h-screen pt-16 bg-white dark:bg-[#0D1117]">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
@@ -117,10 +117,10 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="font-display text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
               Enterprise <span className="text-gradient">Services</span>
             </h1>
-            <p className="text-xl text-light/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               We engineer robust digital solutions that drive transformation, security, and growth for forward-thinking organizations.
             </p>
           </motion.div>
@@ -140,8 +140,8 @@ export default function ServicesPage() {
                 className={cn(
                   "px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border backdrop-blur-sm",
                   activeCategory === cat.id 
-                    ? "bg-white text-dark border-white shadow-[0_0_20px_rgba(255,255,255,0.3)]" 
-                    : "bg-white/5 text-light/60 border-white/10 hover:border-white/30 hover:text-white hover:bg-white/10"
+                    ? "bg-secondary text-white border-secondary shadow-[0_0_20px_rgba(59,206,172,0.3)]" 
+                    : "bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 border-gray-300 dark:border-white/10 hover:border-secondary/50 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-white/10"
                 )}
               >
                 {cat.label}
@@ -158,24 +158,24 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group relative bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(var(--primary),0.15)]"
+                className="group relative bg-gray-50 dark:bg-gradient-to-b dark:from-white/[0.08] dark:to-white/[0.02] border border-gray-200 dark:border-white/10 rounded-2xl p-8 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(var(--primary),0.15)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
                 
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:border-primary transition-all duration-300 shadow-lg">
+                  <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-700 dark:text-white mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 shadow-lg">
                     <service.icon className="w-7 h-7" />
                   </div>
                   
-                  <h3 className="font-display text-2xl font-bold text-secondary mb-4 group-hover:text-white transition-colors">
+                  <h3 className="font-display text-2xl font-bold text-secondary mb-4 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                     {service.title}
                   </h3>
                   
-                  <p className="text-light/70 text-base leading-relaxed mb-8 flex-grow group-hover:text-light/90 transition-colors">
+                  <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 flex-grow group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
                     {service.description}
                   </p>
                   
-                  <div className="pt-6 border-t border-white/5">
+                  <div className="pt-6 border-t border-gray-200 dark:border-white/5">
                     <span className="text-xs font-bold uppercase tracking-wider text-secondary">
                       {categories.find(c => c.id === service.category)?.label}
                     </span>
@@ -189,19 +189,19 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-secondary-dark opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark to-secondary opacity-90" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build the Future?
           </h2>
-          <p className="text-xl text-light/90 max-w-2xl mx-auto mb-10">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
             Let's discuss how our engineering expertise can solve your most complex challenges.
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center justify-center rounded-full text-base font-bold bg-white text-dark hover:bg-light h-14 px-10 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center rounded-full text-base font-bold bg-white text-primary hover:bg-gray-100 h-14 px-10 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-all duration-300 transform hover:-translate-y-1"
           >
             Start a Conversation
           </Link>

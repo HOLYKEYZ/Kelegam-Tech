@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
+import { ThemeToggle } from "@/components/ui/ThemeToggle"
 
 export function Navigation() {
   const pathname = usePathname()
@@ -21,7 +22,7 @@ export function Navigation() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-dark/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-white/10 bg-white/80 dark:bg-[#0D1117]/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 group">
           <Image 
@@ -32,7 +33,7 @@ export function Navigation() {
             className="h-10 w-10 object-contain"
             priority
           />
-          <span className="font-display text-xl font-bold text-white hidden sm:block">Kelagam</span>
+          <span className="font-display text-xl font-bold text-gray-900 dark:text-white hidden sm:block">Kelagam</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -43,7 +44,7 @@ export function Navigation() {
               href={route.href}
               className={cn(
                 "text-sm font-medium hover:text-secondary relative",
-                pathname === route.href ? "text-white" : "text-light/70"
+                pathname === route.href ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300"
               )}
             >
               {route.label}
@@ -52,22 +53,26 @@ export function Navigation() {
               )}
             </Link>
           ))}
+          <ThemeToggle />
           <Link 
             href="/contact"
-            className="bg-secondary text-dark font-bold py-2 px-4 rounded hover:bg-secondary-light text-sm hover:shadow-[0_0_15px_rgba(59,206,172,0.4)]"
+            className="bg-secondary text-white dark:text-[#0D1117] font-bold py-2 px-4 rounded hover:bg-secondary-light text-sm hover:shadow-[0_0_15px_rgba(59,206,172,0.4)]"
           >
-            Get Started
+            Get in Touch
           </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden p-2 text-light hover:text-white"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -78,7 +83,7 @@ export function Navigation() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.15 }}
-            className="md:hidden border-t border-white/10 bg-dark/95 backdrop-blur-xl overflow-hidden"
+            className="md:hidden border-t border-gray-200 dark:border-white/10 bg-white/95 dark:bg-[#0D1117]/95 backdrop-blur-xl overflow-hidden"
           >
             <div className="container mx-auto py-6 px-4 flex flex-col space-y-4">
               {routes.map((route) => (
@@ -86,8 +91,8 @@ export function Navigation() {
                   key={route.href}
                   href={route.href}
                   className={cn(
-                    "text-lg font-medium hover:text-secondary py-2 border-b border-white/5 last:border-0",
-                    pathname === route.href ? "text-white" : "text-light/70"
+                    "text-lg font-medium hover:text-secondary py-2 border-b border-gray-100 dark:border-white/5 last:border-0",
+                    pathname === route.href ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300"
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -97,9 +102,9 @@ export function Navigation() {
               <Link 
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="bg-secondary text-dark font-bold py-3 px-4 rounded hover:bg-secondary-light text-center mt-4"
+                className="bg-secondary text-white dark:text-[#0D1117] font-bold py-3 px-4 rounded hover:bg-secondary-light text-center mt-4"
               >
-                Get Started
+                Get in Touch
               </Link>
             </div>
           </motion.div>

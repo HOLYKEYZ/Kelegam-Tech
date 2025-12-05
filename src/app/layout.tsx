@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-dark text-light min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-white dark:bg-[#0D1117] text-gray-900 dark:text-[#E6EDF3] min-h-screen flex flex-col`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="dark"

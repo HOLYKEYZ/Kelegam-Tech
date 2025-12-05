@@ -4,10 +4,11 @@
 
 @layer base {
   :root {
+    /* Light Mode Colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 98%;
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
@@ -33,6 +34,12 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Custom Light Mode */
+    --dark: 0 0% 100%;
+    --dark-lighter: 210 20% 98%;
+    --dark-card: 0 0% 100%;
+    --light: 222.2 84% 4.9%;
   }
 
   .dark {
@@ -63,6 +70,12 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
+    /* Custom Dark Mode */
+    --dark: 220 13% 5%;
+    --dark-lighter: 220 13% 9%;
+    --dark-card: 220 13% 11%;
+    --light: 210 40% 90%;
   }
 }
 
@@ -73,10 +86,21 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Sharp text rendering for all modes */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 }
 
 /* Custom Utilities */
 .text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0A2463] via-[#3BCEAC] to-[#FB8500];
+}
+
+.dark .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-[#4fd1c5] via-[#81e6d9] to-[#fbd38d];
 }
 
@@ -100,27 +124,37 @@
   animation: gradient 3s linear infinite;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Light Mode */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--dark));
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary-light));
+  background: #3BCEAC;
   border-radius: 5px;
-  border: 2px solid hsl(var(--dark));
+  border: 2px solid #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--secondary));
+  background: #2ba88a;
+}
+
+/* Custom Scrollbar - Dark Mode */
+.dark ::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3BCEAC;
+  border: 2px solid #0D1117;
 }
 
 /* Custom Text Selection */
 ::selection {
-  background: hsl(var(--primary));
+  background: #3BCEAC;
   color: white;
 }
