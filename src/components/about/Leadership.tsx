@@ -3,39 +3,100 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 
+const team = [
+  {
+    name: "Treasure Emmanuel",
+    role: "Founder & Lead Systems Architect",
+    image: "/images/team/treasure-emmanuel.jpg",
+    bio: "A multidisciplinary technology architect and systems strategist with expertise in geospatial analytics, AI-assisted platforms, and large-scale digital system design. Treasure leads Kelagam's product vision, technical architecture, and long-term innovation strategy, positioning the company as a key contributor to Africa's modern digital infrastructure."
+  },
+  {
+    name: "Abraham O. Alhassan",
+    role: "Chief Operating Officer (COO)",
+    image: "/images/team/abraham-alhassan.jpg",
+    bio: "With over 15 years of operational leadership across security, surveillance, and emergency management, Abraham drives Kelagam's operational strategy and execution frameworks. Drawing from experience at SPDC and safety compliance roles, he ensures solutions meet institutional expectations for reliability and disciplined delivery."
+  },
+  {
+    name: "Ayanda Johnson",
+    role: "Chief Technology Officer (CTO)",
+    image: "/images/team/ayanda-johnson.jpg",
+    bio: "Leading software engineering, platform architecture, and AI integration. Ayanda oversees backend and frontend development, ensuring the EIS platform and Kelagam's ecosystem are technically robust, secure, scalable, and aligned with global engineering standards."
+  },
+  {
+    name: "Engineer Joseph Igunwe",
+    role: "Chief Systems Integration Officer (CSIO)",
+    image: "/images/team/joseph-igunwe.jpg",
+    bio: "A globally experienced Engineering Technologist specializing in ICT infrastructure, PIDS, and advanced surveillance integrations. With certifications including CCNP and CompTIA Security+, Joseph oversees all field engineering processes and the unification of physical systems with Kelagam's software platforms."
+  }
+]
+
 export function Leadership() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-[#161b22]">
-      <div className="container mx-auto px-4 text-center">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12"
-        >
-          <span className="text-gradient">Leadership</span>
-        </motion.h2>
+    <section className="py-24 bg-gray-50 dark:bg-[#161b22] relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+          >
+            Leadership <span className="text-gradient">Team</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+          >
+            Visionary leaders building Africa's digital future through engineering excellence and strategic innovation.
+          </motion.p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {[1, 2, 3].map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {team.map((member, index) => (
             <motion.div
-              key={item}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: item * 0.1 }}
-              className="bg-white dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 rounded-2xl p-8 flex flex-col items-center"
+              transition={{ delay: index * 0.1 }}
+              className="group relative"
             >
-              <div className="w-28 h-28 rounded-full bg-gray-100 dark:bg-[#161b22] border-2 border-secondary/30 mb-6 overflow-hidden flex items-center justify-center">
-                <svg className="w-16 h-16 text-secondary/40" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
+              <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 shadow-lg hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+                {/* Image Container */}
+                <div className="relative h-80 w-full overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="relative p-6 flex flex-col flex-grow">
+                  <div className="mb-4">
+                    <h3 className="font-display text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition-colors">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm font-bold text-secondary uppercase tracking-wider">
+                      {member.role}
+                    </p>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-6 group-hover:line-clamp-none transition-all duration-300">
+                    {member.bio}
+                  </p>
+                </div>
+
+                {/* Hover Border Gradient */}
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-secondary/20 rounded-2xl transition-colors duration-300 pointer-events-none" />
               </div>
-              <h3 className="font-bold text-gray-900 dark:text-white text-xl mb-1">Team Member Name</h3>
-              <p className="text-secondary text-sm font-medium mb-4">Position Title</p>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
-                Short bio description goes here. Experienced in building scalable systems and leading technical teams.
-              </p>
             </motion.div>
           ))}
         </div>
@@ -44,10 +105,11 @@ export function Leadership() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto text-center bg-white dark:bg-[#1c2128] rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-white/5 shadow-xl relative overflow-hidden"
         >
-          <p className="text-xl md:text-2xl font-display font-medium text-gray-900 dark:text-white leading-relaxed">
-            "Our philosophy is simple: <span className="text-secondary">Build with integrity.</span> <span className="text-primary-light">Deploy with excellence.</span> <span className="text-accent">Innovate with purpose.</span>"
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
+          <p className="text-xl md:text-2xl font-display font-medium text-gray-900 dark:text-white leading-relaxed relative z-10">
+            "Our philosophy is simple: <span className="text-secondary">Build with integrity.</span> <span className="text-primary">Deploy with excellence.</span> <span className="text-blue-500">Innovate with purpose.</span>"
           </p>
         </motion.div>
       </div>
