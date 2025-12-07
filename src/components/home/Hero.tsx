@@ -2,6 +2,7 @@
 
 import { ArrowRight, ChevronDown, Cloud, Code, Cpu, Database, Globe, Lock, Shield } from "lucide-react"
 import Link from "next/link"
+import { FaRocket } from "react-icons/fa"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
@@ -32,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary mb-8 backdrop-blur-sm"
         >
-          🚀 Building Africa's Digital Future
+          <FaRocket className="mr-2 h-4 w-4" /> Building Africa's Digital Future
         </motion.div>
 
         {/* Headline */}
