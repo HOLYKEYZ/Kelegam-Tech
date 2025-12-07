@@ -81,7 +81,7 @@ export function Leadership() {
                 {/* Content */}
                 <div className="relative p-6 flex flex-col flex-grow">
                   <div className="mb-4">
-                    <h3 className="font-display text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition-colors">
+                    <h3 className="font-display text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#FB8500] transition-colors">
                       {member.name}
                     </h3>
                     <p className="text-sm font-bold text-secondary uppercase tracking-wider">
@@ -109,7 +109,7 @@ export function Leadership() {
         >
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
           <p className="text-xl md:text-2xl font-display font-medium text-gray-900 dark:text-white leading-relaxed relative z-10">
-            "Our philosophy is simple: <span className="text-secondary">Build with integrity.</span> <span className="text-primary">Deploy with excellence.</span> <span className="text-blue-500">Innovate with purpose.</span>"
+            "Our philosophy is simple: <span className="text-secondary">Build with integrity.</span> <span className="text-[#FB8500]">Deploy with intelligence.</span> <span className="text-blue-500">Innovate with purpose.</span>"
           </p>
         </motion.div>
       </div>
