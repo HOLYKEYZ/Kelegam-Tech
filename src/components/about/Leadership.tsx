@@ -43,7 +43,7 @@ export function Leadership() {
             viewport={{ once: true }}
             className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            Leadership <span className="text-gradient">Team</span>
+            Leadership Team
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

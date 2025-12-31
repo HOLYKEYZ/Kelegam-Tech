@@ -119,7 +119,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-display text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-              Enterprise <span className="text-gradient">Services</span>
+              Enterprise Services
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               We engineer robust digital solutions that drive transformation, security, and growth for forward-thinking organizations.

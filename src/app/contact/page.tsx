@@ -46,7 +46,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             className="max-w-xl mx-auto w-full relative z-10"
           >
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Let's <span className="text-gradient">Build Together</span></h1>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Let's Build Together</h1>
             <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg">Tell us about your project and we'll get back to you within 24 hours</p>
 
             <div className="bg-white dark:bg-[#1c2128] border border-gray-200 dark:border-white/5 rounded-2xl p-8 shadow-xl backdrop-blur-sm">

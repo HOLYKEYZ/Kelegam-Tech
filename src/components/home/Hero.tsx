@@ -26,16 +26,6 @@ export function Hero() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-secondary/10 dark:bg-primary/10 rounded-full blur-[120px] pointer-events-none z-0" />
       
       <div className="container mx-auto px-4 relative z-10 text-center">
-        {/* Badge */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary mb-8 backdrop-blur-sm"
-        >
-          <FaRocket className="mr-2 h-4 w-4" /> Building Africa's Digital Future
-        </motion.div>
-
         {/* Headline */}
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +33,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 max-w-5xl mx-auto"
         >
-          Powering Africa's <span className="text-gradient">Boldest</span> Global Digital Platforms
+          Building The Global <br /> Digital Future Now
         </motion.h1>
 
         {/* Subheadline */}
@@ -53,7 +43,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Kelagam Technologies — Modern Software & AI Engineering for Enterprises & Institutions. We build secure, scalable, and intelligent digital platforms.
+          Kelagam Technologies is a modern software and AI engineering company building secure, scalable, and intelligent digital platforms for enterprises, institutions, and governments.
         </motion.p>
 
         {/* CTAs */}

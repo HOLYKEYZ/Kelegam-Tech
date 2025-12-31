@@ -15,7 +15,7 @@ export function PlatformsShowcase() {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
-            Our Digital <span className="text-gradient">Platforms</span>
+            Our Digital Platforms
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export function PlatformsShowcase() {
             icon={Server}
             title="EIS"
             tagline="Emergency Intelligence System"
-            description="EIS is a powerful digital operations suite that helps organizations manage complex workflows, coordinate resources, and improve real-time operational efficiency."
+            description="A state-scale operations platform designed to enhance emergency coordination, multi-agency workflow management, and resource deployment efficiency."
             capabilities={[
               "AI-powered workflow automation",
               "Multi-location resource coordination",
@@ -54,10 +54,10 @@ export function PlatformsShowcase() {
             tagline="Digital Connection Platform"
             description="RingAm allows fans, clients, and learners to connect directly with verified celebrities, influencers, experts, and professionals through paid video and audio sessions."
             capabilities={[
-              "Verified celebrity & professional profiles",
-              "HD video & crystal-clear audio",
-              "Smart scheduling & payments",
-              "Global reach with multi-currency"
+              "Influencer–fan engagement channels",
+              "Expert advisory sessions",
+              "Monetization tools for creators and professionals",
+              "Global reach"
             ]}
             ctaText="Explore RingAm"
             ctaHref="/platforms/ringam"

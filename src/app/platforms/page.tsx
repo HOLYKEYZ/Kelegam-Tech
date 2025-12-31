@@ -12,7 +12,7 @@ export default function PlatformsPage() {
         <div className="absolute inset-0 bg-gradient-radial from-primary/10 to-transparent opacity-50 pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-            Our Digital <span className="text-gradient">Platforms</span>
+            Our Digital Platforms
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Kelagam develops platforms built for scale, performance, and real-world impact.

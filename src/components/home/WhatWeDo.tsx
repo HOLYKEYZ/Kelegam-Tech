@@ -81,7 +81,7 @@ export function WhatWeDo() {
             transition={{ delay: 0.1 }}
             className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto"
           >
-            We develop powerful digital platforms that drive transformation
+            Kelagam builds multi-layered digital systems across various impact sectors. Below are our flagship initiatives and products.
           </motion.p>
         </div>
 
