@@ -85,7 +85,7 @@ export function WhyKelagam() {
             
             <div className="grid grid-cols-2 gap-6">
               {[
-                { label: "Enterprise Clients", value: "50+" },
+                { label: "", value: "" },
                 { label: "Top Tech Gurus", value: "50+" },
                 { label: "Uptime SLA", value: "99.9%" },
                 { label: "Support", value: "24/7" },
