@@ -21,7 +21,7 @@
     "react-hook-form": "^7.67.0",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^3.4.0",
-    "zod": "^4.1.13"
+"zod": "^3.0.0"
   },
   "devDependencies": {
     "@hookform/resolvers": "^5.2.2",
