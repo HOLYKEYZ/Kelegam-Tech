@@ -10,6 +10,7 @@ const features = [
     title: "Operational Analytics",
     description: "Real-time data-driven operations that transform raw data into actionable intelligence for smarter decision-making across your organization.",
     color: "text-primary",
+    glowBgClass: "bg-primary",
     bg: "bg-primary/10",
     border: "group-hover:border-primary/50",
     shadow: "group-hover:shadow-primary/20"
@@ -19,6 +20,7 @@ const features = [
     title: "Workflow Automation",
     description: "Intelligent automation systems that eliminate manual processes, reduce errors, and accelerate operations through AI-driven workflows.",
     color: "text-secondary",
+    glowBgClass: "bg-secondary",
     bg: "bg-secondary/10",
     border: "group-hover:border-secondary/50",
     shadow: "group-hover:shadow-secondary/20"
@@ -28,6 +30,7 @@ const features = [
     title: "Real-Time Coordination",
     description: "Seamless synchronization of teams, resources, and operations across multiple locations with live updates and intelligent routing.",
     color: "text-accent",
+    glowBgClass: "bg-accent",
     bg: "bg-accent/10",
     border: "group-hover:border-accent/50",
     shadow: "group-hover:shadow-accent/20"
@@ -37,6 +40,7 @@ const features = [
     title: "Enterprise-grade Data Platforms",
     description: "Scalable cloud infrastructure built into every layer, ensuring your digital transformation journey is protected from day one.",
     color: "text-primary",
+    glowBgClass: "bg-primary",
     bg: "bg-primary/10",
     border: "group-hover:border-primary/50",
     shadow: "group-hover:shadow-primary/20"
@@ -46,6 +50,7 @@ const features = [
     title: "Data Visibility & Performance",
     description: "Comprehensive dashboards and analytics engines that provide complete visibility into operations, performance metrics, and KPIs.",
     color: "text-secondary",
+    glowBgClass: "bg-secondary",
     bg: "bg-secondary/10",
     border: "group-hover:border-secondary/50",
     shadow: "group-hover:shadow-secondary/20"
@@ -55,11 +60,18 @@ const features = [
     title: "Measurable Impact",
     description: "Systems designed with clear ROI in mind - track efficiency gains, cost reductions, and operational improvements in real-time.",
     color: "text-accent",
+    glowBgClass: "bg-accent",
     bg: "bg-accent/10",
     border: "group-hover:border-accent/50",
     shadow: "group-hover:shadow-accent/20"
   }
-]
+];
+    bg: "bg-accent/10",
+    border: "group-hover:border-accent/50",
+    shadow: "group-hover:shadow-accent/20",
+    glowBgClass: "bg-accent"
+  }
+];
 
 export function WhatWeDo() {
   return (
@@ -109,11 +121,11 @@ export function WhatWeDo() {
                 {feature.description}
               </p>
               
-              {/* Glow Effect on Hover */}
-              <div className={cn(
-                "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none",
-                feature.color.replace('text-', 'bg-')
-              )} />
+      {/* Glow Effect on Hover */}
+      <div className={cn(
+        "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none",
+        feature.glowBgClass
+      )} />
             </motion.div>
           ))}
         </div>
